@@ -24,6 +24,8 @@ mongoose
   .then(() => console.log("MongoDB Connected..."))
   .catch(err => console.log(err));
 
+// Use Routes
+app.use("/api/items", items);
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
   // Set static folder
@@ -33,9 +35,6 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
-
-// Use Routes
-app.use("/api/items", items);
 
 const port = process.env.PORT || 5000;
 
