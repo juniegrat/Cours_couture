@@ -1,3 +1,4 @@
 module.exports = {
-    mongoURI: 'mongodb://localhost:27017/YourDB'
-}
+  mongoURI:
+    "mongodb://juni:noirepute1.@ds115653.mlab.com:15653/cours-de-couture"
+};
